@@ -1,0 +1,1 @@
+- Use Powershell and AWS Module for Powershell instead of aws cli for everything.

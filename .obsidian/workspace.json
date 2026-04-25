@@ -1,0 +1,241 @@
+{
+  "main": {
+    "id": "9b2a71953aef1e4c",
+    "type": "split",
+    "children": [
+      {
+        "id": "4eb91602e7890011",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a5ea119e8e764f0f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Welcome.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Welcome"
+            }
+          },
+          {
+            "id": "c5d5101932dc6407",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes_/2026-04-24.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-04-24"
+            }
+          },
+          {
+            "id": "a19cf75885310412",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projects/Powershell/PLAN.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PLAN"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6136ea7323fdd997",
+    "type": "split",
+    "children": [
+      {
+        "id": "f1c482163fe58f49",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd74ac038573b8c3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9f602691fa470784",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "56e12d2d942a89b2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "a4c6650eba06a84b",
+    "type": "split",
+    "children": [
+      {
+        "id": "4ccd7fd59725d4fc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3a385c6240c1c4c3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Welcome"
+            }
+          },
+          {
+            "id": "94dedf0dc2b05e97",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Welcome"
+            }
+          },
+          {
+            "id": "02b3627978a88cb3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e0ba3616cc30462e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "241458db94af206f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Welcome"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-importer:Open Importer": false
+    }
+  },
+  "active": "c5d5101932dc6407",
+  "lastOpenFiles": [
+    "skills/SecDevOps-Ninja.skill/SKILL.md",
+    "_notes_/2026-04-24.md",
+    "Untitled 1",
+    "_notes_",
+    "Projects/Powershell/PLAN.md",
+    "Powershell.md",
+    "Projects/SecDevOps/SecDevOps_Repo_Framework.md",
+    "Projects/SecDevOps/SecDevOps_Repo_Framework.pdf",
+    "chats/Web App Disaster Recovery SOP.md",
+    "chats/project-export-prompt.md",
+    "chats/github bluerush account recovery.md",
+    "CLAUDE.md",
+    "Projects/IV.Tools.NW/NW-002_SPECS.md.md",
+    "IV.Tools.NW",
+    "BlueRush/Welcome.md",
+    "Projects/Powershell/CLAUDE.md",
+    "Projects/Powershell/Powershell/plan.md",
+    "Projects/Powershell/Powershell/plan.md.tmp.1560.1777032735252",
+    "github bluerush account recovery.md",
+    "Web App Disaster Recovery SOP.md",
+    "Welcome.md",
+    "OneNote"
+  ]
+}
