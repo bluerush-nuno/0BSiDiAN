@@ -3,8 +3,8 @@ title: Bluerush
 category: entity
 summary: Bluerush — the operator organization. AWS Org owner, primary region ca-central-1, running a mixed Windows/Linux web stack.
 tags: [org, aws, operator]
-sources: 3
-updated: 2026-04-24
+sources: 4
+updated: 2026-04-29
 ---
 
 # Bluerush
@@ -42,6 +42,10 @@ Key ops identities:
 
 - **GitHub org recovery**: `github.com/bluerush` account is 2FA-locked. Ticket #4178948 open with GitHub Support. See [[sources/github-account-recovery]].
 
+## PowerShell Tooling
+
+Bluerush has a canonical PowerShell scaffold (`PSCodebase`) and a planned template-repo + bootstrapper for spawning new modules. See [[sources/pscodebase-scaffold]] and [[sources/ps-module-template-plan]]. Standards live in `Projects/Powershell/CLAUDE.md`.
+
 ---
 
 ## Related Pages
@@ -49,5 +53,7 @@ Key ops identities:
 - [[sources/secdevops-repo-framework]]
 - [[sources/web-app-dr-sop]]
 - [[sources/github-account-recovery]]
+- [[sources/pscodebase-scaffold]]
 - [[entities/jenkins]], [[entities/opentofu]], [[entities/ansible]], [[entities/aws-organizations]]
+- [[entities/pester]], [[entities/psscriptanalyzer]], [[entities/aws-tools-modular]]
 - [[synthesis/secdevops-posture]], [[synthesis/dr-and-resilience-strategy]]

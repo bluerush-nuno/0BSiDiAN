@@ -1,7 +1,7 @@
 ---
 title: Wiki Log
 category: log
-updated: 2026-04-24
+updated: 2026-04-29
 ---
 
 # Wiki Log
@@ -18,3 +18,9 @@ Touched: sources/web-app-dr-sop, entities/bluerush, concepts/disaster-recovery, 
 
 ## [2026-04-24] ingest | GitHub bluerush Account Recovery
 Touched: sources/github-account-recovery, entities/bluerush, index.md
+
+## [2026-04-29] lint | initial post-bootstrap health check
+Findings: 19 pages, 0 orphans, 0 stale, 0 missing frontmatter. 1 false-positive broken-wikilink in concepts/blast-radius-management (bash test expression `[[ "$response" == "YES" ]]` inside a code fence — lint regex doesn't respect fences). No content changes needed.
+
+## [2026-04-29] ingest | PSCodebase Scaffold
+Touched: sources/pscodebase-scaffold, entities/bluerush, entities/aws-organizations, entities/pester, entities/psscriptanalyzer, entities/aws-tools-modular, concepts/public-private-module-split, concepts/explicit-module-exports, concepts/everything-as-code, concepts/zero-secrets-in-repo, concepts/sts-assume-role-pattern, index.md
