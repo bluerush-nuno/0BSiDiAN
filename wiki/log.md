@@ -24,3 +24,6 @@ Findings: 19 pages, 0 orphans, 0 stale, 0 missing frontmatter. 1 false-positive 
 
 ## [2026-04-29] ingest | PSCodebase Scaffold
 Touched: sources/pscodebase-scaffold, entities/bluerush, entities/aws-organizations, entities/pester, entities/psscriptanalyzer, entities/aws-tools-modular, concepts/public-private-module-split, concepts/explicit-module-exports, concepts/everything-as-code, concepts/zero-secrets-in-repo, concepts/sts-assume-role-pattern, index.md
+
+## [2026-04-29] ingest | PowerShell Module Template Plan
+Touched: sources/ps-module-template-plan, entities/psmoduletemplate, entities/bluerush, entities/pester, entities/psscriptanalyzer, entities/aws-tools-modular, concepts/scaffold-templating, concepts/public-private-module-split, concepts/explicit-module-exports, concepts/everything-as-code, index.md

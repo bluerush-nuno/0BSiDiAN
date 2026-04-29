@@ -3,7 +3,7 @@ title: PSScriptAnalyzer
 category: entity
 summary: Static analyzer for PowerShell. First gate in Bluerush CI — runs before Pester so lint failures fail fast.
 tags: [powershell, static-analysis, ci, lint]
-sources: 1
+sources: 2
 updated: 2026-04-29
 ---
 

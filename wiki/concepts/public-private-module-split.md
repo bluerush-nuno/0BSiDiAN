@@ -3,7 +3,7 @@ title: Public / Private Module Split
 category: concept
 summary: PowerShell modules use Public/ and Private/ subdirectories — the .psm1 dot-sources Private first, then Public, and Export-ModuleMember is always explicit (never wildcarded).
 tags: [powershell, modules, scaffold, conventions]
-sources: 1
+sources: 2
 updated: 2026-04-29
 ---
 

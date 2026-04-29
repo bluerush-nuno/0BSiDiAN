@@ -3,7 +3,7 @@ title: AWS.Tools.* (Modular)
 category: entity
 summary: Per-service AWS SDK modules for PowerShell. Bluerush uses these exclusively — the monolithic AWSPowerShell module is explicitly forbidden.
 tags: [aws, powershell, sdk, modules]
-sources: 1
+sources: 2
 updated: 2026-04-29
 ---
 

@@ -3,7 +3,7 @@ title: Explicit Module Exports
 category: concept
 summary: PowerShell modules never use Export-ModuleMember -Function * or wildcarded FunctionsToExport. Public surface is enumerated, either statically in the manifest or dynamically from Public/ filenames.
 tags: [powershell, modules, security, conventions]
-sources: 1
+sources: 2
 updated: 2026-04-29
 ---
 

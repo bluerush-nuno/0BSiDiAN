@@ -3,7 +3,7 @@ title: Pester
 category: entity
 summary: PowerShell unit-test framework. Bluerush standardizes on Pester 5.x with full AWS API mocking for unit tests; integration tests use credential-aware skip guards.
 tags: [powershell, testing, ci, pester]
-sources: 1
+sources: 2
 updated: 2026-04-29
 ---
 

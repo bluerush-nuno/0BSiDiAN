@@ -8,7 +8,7 @@ updated: 2026-04-29
 
 > **Topic**: SecDevOps — AWS multi-account operations, CI/CD, IaC, DR, scripting standards
 > **Initialized**: 2026-04-24
-> **Sources ingested**: 4
+> **Sources ingested**: 5
 
 ---
 
@@ -20,6 +20,7 @@ updated: 2026-04-29
 | [[sources/web-app-dr-sop]] | Disaster recovery SOP for Windows EC2 + RDS MySQL + S3 media stack (ca-central-1) | 2026-03 |
 | [[sources/github-account-recovery]] | GitHub org account recovery note for github.com/bluerush | 2026-04 |
 | [[sources/pscodebase-scaffold]] | Production-grade PowerShell repo scaffold — Modules/Public/Private split, AWS.Tools modular, SSM-only secrets, Pester 5 with mocking, GitHub Actions CI | 2026-04 |
+| [[sources/ps-module-template-plan]] | Plan for a PSModuleTemplate GitHub Template Repository + bootstrap.ps1 initializer (chosen over branches/forks/Plaster/Catesta) | 2026-04 |
 
 ---
 
@@ -35,6 +36,7 @@ updated: 2026-04-29
 | [[entities/pester]] | Pester 5.x — PowerShell test framework, full AWS mocking for unit tests |
 | [[entities/psscriptanalyzer]] | PSScriptAnalyzer — PowerShell static analyzer; first gate in CI |
 | [[entities/aws-tools-modular]] | AWS.Tools.* — per-service AWS SDK modules; AWSPowerShell monolith forbidden |
+| [[entities/psmoduletemplate]] | Planned GitHub Template Repository + bootstrap.ps1 for spawning new PowerShell module repos |
 
 ---
 
@@ -53,6 +55,7 @@ updated: 2026-04-29
 | [[concepts/rds-point-in-time-restore]] | PITR pattern — restore to new instance, validate, swap endpoint via SSM |
 | [[concepts/public-private-module-split]] | PowerShell module layout — Public/ + Private/, dot-source order, one function per file |
 | [[concepts/explicit-module-exports]] | No wildcarded exports; FunctionsToExport is enumerated or dynamically derived from Public/ |
+| [[concepts/scaffold-templating]] | GitHub Template Repo + bootstrap.ps1 pattern for spawning project repos — no Plaster/Catesta deps |
 
 ---
 
