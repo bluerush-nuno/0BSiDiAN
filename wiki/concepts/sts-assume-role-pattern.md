@@ -3,8 +3,8 @@ title: STS Assume-Role Pattern
 category: concept
 summary: EC2 instance profiles provide the initial identity; STS AssumeRole grants scoped, temporary credentials for cross-account or elevated operations. No static credentials anywhere.
 tags: [aws, iam, sts, security, credentials, multi-account]
-sources: 2
-updated: 2026-04-24
+sources: 3
+updated: 2026-04-29
 ---
 
 # STS Assume-Role Pattern
@@ -57,13 +57,32 @@ This is how `scripts/pwsh/aws/iam/Invoke-MultiAccountAudit.ps1` and `Get-AllAcco
 
 The DR runbook PowerShell scripts all use `-ProfileName bluroot-td` — a named AWS profile on the operator's machine, not a static key. The SSM cmdlet `Set-SSMParameter` updates the `/prod/database/endpoint` path after a restore. See [[sources/web-app-dr-sop]], [[concepts/zero-secrets-in-repo]].
 
+## Module-level Pattern
+
+The [[sources/pscodebase-scaffold]] codifies the operational form for use inside scripts:
+
+```powershell
+try {
+    $creds = (Use-STSRole -RoleArn $RoleArn -RoleSessionName $session -Region $Region).Credentials
+    Set-AWSCredential -AccessKey $creds.AccessKeyId -SecretKey $creds.SecretAccessKey `
+                      -SessionToken $creds.SessionToken
+    # ... do work ...
+}
+finally {
+    Clear-AWSCredential
+}
+```
+
+The `finally` block matters — it scrubs the session credential even if the work block throws.
+
 ---
 
 ## Related Pages
 
 - [[sources/secdevops-repo-framework]]
 - [[sources/web-app-dr-sop]]
+- [[sources/pscodebase-scaffold]]
 - [[entities/jenkins]]
-- [[entities/aws-organizations]]
+- [[entities/aws-organizations]], [[entities/aws-tools-modular]]
 - [[concepts/zero-secrets-in-repo]]
 - [[synthesis/secdevops-posture]]

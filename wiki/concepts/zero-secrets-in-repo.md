@@ -3,8 +3,8 @@ title: Zero Secrets in Repo
 category: concept
 summary: No credentials, keys, tokens, or secret values are ever committed to the ops repo. SSM Parameter Store paths and Secrets Manager ARNs are used as placeholders instead.
 tags: [security, secrets, ssm, gitops, principle]
-sources: 2
-updated: 2026-04-24
+sources: 3
+updated: 2026-04-29
 ---
 
 # Zero Secrets in Repo
@@ -63,12 +63,17 @@ $DBEndpoint = Get-SSMParameter -Name "/prod/database/endpoint" -WithDecryption $
 
 The DR SOP updates the DB endpoint in SSM after a restore (`Set-SSMParameter`), so applications pick up the new endpoint on restart without any code change. This is the runtime secrets pattern in action. See [[sources/web-app-dr-sop]], [[concepts/rds-point-in-time-restore]].
 
+## Module-level Reinforcement
+
+The [[sources/pscodebase-scaffold]] makes this rule structural at the config-file layer: environment configs (`Config/Environments/prod.psd1`) reference SSM paths only, never values. Pulled at runtime via `Get-SSMParameterValue` / `Get-SECSecretValue`. Schemas in `Config/Schemas/` validate that no field looks like a secret value.
+
 ---
 
 ## Related Pages
 
 - [[sources/secdevops-repo-framework]]
 - [[sources/web-app-dr-sop]]
+- [[sources/pscodebase-scaffold]]
 - [[concepts/everything-as-code]]
 - [[concepts/pre-commit-gating]]
 - [[concepts/sts-assume-role-pattern]]

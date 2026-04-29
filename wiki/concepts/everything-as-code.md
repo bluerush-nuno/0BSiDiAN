@@ -3,8 +3,8 @@ title: Everything-as-Code
 category: concept
 summary: All runnable ops artifacts — scripts, pipelines, runbooks, SQL, config — live in the repo. If it runs in prod, it must be version-controlled.
 tags: [principle, gitops, devops, secdevops]
-sources: 1
-updated: 2026-04-24
+sources: 3
+updated: 2026-04-29
 ---
 
 # Everything-as-Code
@@ -54,8 +54,10 @@ updated: 2026-04-24
 
 ## Related Pages
 
-- [[sources/secdevops-repo-framework]]
+- [[sources/secdevops-repo-framework]], [[sources/pscodebase-scaffold]], [[sources/ps-module-template-plan]]
 - [[concepts/zero-secrets-in-repo]]
 - [[concepts/pre-commit-gating]]
 - [[concepts/trunk-based-development]]
+- [[concepts/public-private-module-split]], [[concepts/explicit-module-exports]]
+- [[concepts/scaffold-templating]]
 - [[synthesis/secdevops-posture]]

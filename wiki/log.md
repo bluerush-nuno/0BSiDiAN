@@ -1,7 +1,7 @@
 ---
 title: Wiki Log
 category: log
-updated: 2026-04-24
+updated: 2026-04-29
 ---
 
 # Wiki Log
@@ -18,3 +18,20 @@ Touched: sources/web-app-dr-sop, entities/bluerush, concepts/disaster-recovery, 
 
 ## [2026-04-24] ingest | GitHub bluerush Account Recovery
 Touched: sources/github-account-recovery, entities/bluerush, index.md
+
+## [2026-04-29] lint | initial post-bootstrap health check
+Findings: 19 pages, 0 orphans, 0 stale, 0 missing frontmatter. 1 false-positive broken-wikilink in concepts/blast-radius-management (bash test expression `[[ "$response" == "YES" ]]` inside a code fence — lint regex doesn't respect fences). No content changes needed.
+
+## [2026-04-29] ingest | PSCodebase Scaffold
+Touched: sources/pscodebase-scaffold, entities/bluerush, entities/aws-organizations, entities/pester, entities/psscriptanalyzer, entities/aws-tools-modular, concepts/public-private-module-split, concepts/explicit-module-exports, concepts/everything-as-code, concepts/zero-secrets-in-repo, concepts/sts-assume-role-pattern, index.md
+
+## [2026-04-29] ingest | PowerShell Module Template Plan
+Touched: sources/ps-module-template-plan, entities/psmoduletemplate, entities/bluerush, entities/pester, entities/psscriptanalyzer, entities/aws-tools-modular, concepts/scaffold-templating, concepts/public-private-module-split, concepts/explicit-module-exports, concepts/everything-as-code, index.md
+
+## [2026-04-29] ingest | TDKC DigitalReach Environments
+Touched: sources/tdkc-environments, sources/web-app-dr-sop, entities/tdkc, entities/bluerush, entities/aws-organizations, concepts/stage-first-deployment, concepts/directory-based-env-isolation, index.md
+Notes: TDKC EC2 hosts (host1a/1b-tdkc) match the DR SOP's prod stack — added cross-link in both directions. Flagged useSSL=false in JDBC URLs and static DB creds in server.xml as open hardening items on entities/tdkc.
+
+## [2026-04-29] ingest | NW-002 Pet IndiVideo Data Automation
+Touched: sources/nw-002-pet-data-automation, entities/nationwide, entities/bluerush, concepts/data-residency, index.md
+Notes: US-soil residency requirement forces NW-002 out of ca-central-1 — captured the regional knock-ons (KMS, S3, logs, backups, DR target) on concepts/data-residency. Source file has a doubled .md filename suffix and embeds two "We couldn't load the file" stubs from the original export — flagged for future supplementing from BRD/SharePoint recording.

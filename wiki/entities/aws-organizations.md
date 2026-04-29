@@ -3,8 +3,8 @@ title: AWS Organizations
 category: entity
 summary: AWS Organizations multi-account structure used by Bluerush; management account holds org-level permissions; member accounts assumed via STS OrgAuditRole or CICDDeployRole.
 tags: [aws, organizations, iam, sts, multi-account]
-sources: 1
-updated: 2026-04-24
+sources: 3
+updated: 2026-04-29
 ---
 
 # AWS Organizations
@@ -47,6 +47,7 @@ See [[concepts/sts-assume-role-pattern]].
 - `scripts/bash/aws/org/assume-role-all-accounts.sh` — Bash version of multi-account assume
 - `scripts/pwsh/aws/org/Get-AllAccountResources.ps1` — PowerShell version
 - `scripts/pwsh/aws/iam/Invoke-MultiAccountAudit.ps1` — IAM policy audit across all accounts
+- `Modules/AWS/Public/Get-ActiveOrgAccounts.ps1` (in [[sources/pscodebase-scaffold]]) — typed enumeration with exclusion list, returns `Amazon.Organizations.Model.Account[]`
 
 ## IaC Environments
 
@@ -56,8 +57,8 @@ Each AWS account maps to an OpenTofu environment root module (`iac/environments/
 
 ## Related Pages
 
-- [[sources/secdevops-repo-framework]]
-- [[entities/bluerush]]
+- [[sources/secdevops-repo-framework]], [[sources/pscodebase-scaffold]], [[sources/tdkc-environments]]
+- [[entities/bluerush]], [[entities/aws-tools-modular]], [[entities/tdkc]]
 - [[entities/jenkins]]
 - [[concepts/sts-assume-role-pattern]]
 - [[concepts/directory-based-env-isolation]]
