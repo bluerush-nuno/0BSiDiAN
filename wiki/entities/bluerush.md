@@ -1,9 +1,9 @@
 ---
 title: Bluerush
 category: entity
-summary: Bluerush — the operator organization. AWS Org owner, primary region ca-central-1, running a mixed Windows/Linux web stack including the TDKC TD Knowledge Centre.
+summary: Bluerush — the operator organization. AWS Org owner, primary region ca-central-1, running a mixed Windows/Linux web stack including the TDKC TD Knowledge Centre and the IndiVideo data pipelines.
 tags: [org, aws, operator]
-sources: 6
+sources: 7
 updated: 2026-04-29
 ---
 
@@ -29,6 +29,10 @@ updated: 2026-04-29
 ## Hosted Properties
 
 - [[entities/tdkc]] — TD Knowledge Centre (`td-digitalreach-html`); the production target the DR SOP restores.
+
+## Vendor Engagements
+
+- [[entities/nationwide]] — NW-002 Pet IndiVideo data automation (US-soil residency required; see [[concepts/data-residency]] for the regional knock-ons).
 
 ## Ops Repository
 
@@ -58,8 +62,9 @@ Bluerush has a canonical PowerShell scaffold (`PSCodebase`) and a planned templa
 - [[sources/web-app-dr-sop]]
 - [[sources/github-account-recovery]]
 - [[sources/pscodebase-scaffold]], [[sources/ps-module-template-plan]]
-- [[sources/tdkc-environments]]
+- [[sources/tdkc-environments]], [[sources/nw-002-pet-data-automation]]
 - [[entities/jenkins]], [[entities/opentofu]], [[entities/ansible]], [[entities/aws-organizations]]
 - [[entities/pester]], [[entities/psscriptanalyzer]], [[entities/aws-tools-modular]], [[entities/psmoduletemplate]]
-- [[entities/tdkc]]
+- [[entities/tdkc]], [[entities/nationwide]]
+- [[concepts/data-residency]]
 - [[synthesis/secdevops-posture]], [[synthesis/dr-and-resilience-strategy]]

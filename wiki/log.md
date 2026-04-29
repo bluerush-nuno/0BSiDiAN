@@ -31,3 +31,7 @@ Touched: sources/ps-module-template-plan, entities/psmoduletemplate, entities/bl
 ## [2026-04-29] ingest | TDKC DigitalReach Environments
 Touched: sources/tdkc-environments, sources/web-app-dr-sop, entities/tdkc, entities/bluerush, entities/aws-organizations, concepts/stage-first-deployment, concepts/directory-based-env-isolation, index.md
 Notes: TDKC EC2 hosts (host1a/1b-tdkc) match the DR SOP's prod stack — added cross-link in both directions. Flagged useSSL=false in JDBC URLs and static DB creds in server.xml as open hardening items on entities/tdkc.
+
+## [2026-04-29] ingest | NW-002 Pet IndiVideo Data Automation
+Touched: sources/nw-002-pet-data-automation, entities/nationwide, entities/bluerush, concepts/data-residency, index.md
+Notes: US-soil residency requirement forces NW-002 out of ca-central-1 — captured the regional knock-ons (KMS, S3, logs, backups, DR target) on concepts/data-residency. Source file has a doubled .md filename suffix and embeds two "We couldn't load the file" stubs from the original export — flagged for future supplementing from BRD/SharePoint recording.

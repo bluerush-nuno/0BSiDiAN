@@ -8,7 +8,7 @@ updated: 2026-04-29
 
 > **Topic**: SecDevOps — AWS multi-account operations, CI/CD, IaC, DR, scripting standards
 > **Initialized**: 2026-04-24
-> **Sources ingested**: 6
+> **Sources ingested**: 7
 
 ---
 
@@ -22,6 +22,7 @@ updated: 2026-04-29
 | [[sources/pscodebase-scaffold]] | Production-grade PowerShell repo scaffold — Modules/Public/Private split, AWS.Tools modular, SSM-only secrets, Pester 5 with mocking, GitHub Actions CI | 2026-04 |
 | [[sources/ps-module-template-plan]] | Plan for a PSModuleTemplate GitHub Template Repository + bootstrap.ps1 initializer (chosen over branches/forks/Plaster/Catesta) | 2026-04 |
 | [[sources/tdkc-environments]] | TDKC DigitalReach staging vs prod reference — Tomcat 8.5 on Windows EC2, RDS MySQL 8 in ca-central-1, stage-first deployment | 2026-04 |
+| [[sources/nw-002-pet-data-automation]] | Spec for automating Nationwide's pet-insurance data pipeline (replaces Shaun Ito's manual Excel flow); US-soil data residency required | 2025-01 |
 
 ---
 
@@ -39,6 +40,7 @@ updated: 2026-04-29
 | [[entities/aws-tools-modular]] | AWS.Tools.* — per-service AWS SDK modules; AWSPowerShell monolith forbidden |
 | [[entities/psmoduletemplate]] | Planned GitHub Template Repository + bootstrap.ps1 for spawning new PowerShell module repos |
 | [[entities/tdkc]] | TD Knowledge Centre — Bluerush-hosted client web property (Tomcat 8.5 + RDS MySQL 8); the prod target the DR SOP restores |
+| [[entities/nationwide]] | Nationwide — US insurance client; Bluerush is automating their pet-insurance data pipeline (NW-002), replacing key-person manual work |
 
 ---
 
@@ -59,6 +61,7 @@ updated: 2026-04-29
 | [[concepts/explicit-module-exports]] | No wildcarded exports; FunctionsToExport is enumerated or dynamically derived from Public/ |
 | [[concepts/scaffold-templating]] | GitHub Template Repo + bootstrap.ps1 pattern for spawning project repos — no Plaster/Catesta deps |
 | [[concepts/stage-first-deployment]] | All changes validated in staging then packaged (ZIP / explicit SQL) and applied to prod — no ad-hoc prod edits |
+| [[concepts/data-residency]] | Some workloads must run in specific jurisdictions (NW-002 = US-only); residency drives region, KMS, logs, backups, DR |
 
 ---
 
