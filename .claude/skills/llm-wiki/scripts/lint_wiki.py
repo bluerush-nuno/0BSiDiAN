@@ -27,6 +27,22 @@ from pathlib import Path
 FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 WIKILINK_RE = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]")
 LOG_ENTRY_RE = re.compile(r"^## \[(\d{4}-\d{2}-\d{2})\]", re.MULTILINE)
+FENCED_CODE_RE = re.compile(
+    r"^(?:```|~~~)[^\n]*\n.*?^(?:```|~~~)\s*$",
+    re.DOTALL | re.MULTILINE,
+)
+INLINE_CODE_RE = re.compile(r"`[^`\n]+`")
+
+
+def strip_code_segments(text: str) -> str:
+    """Remove fenced code blocks and inline code spans.
+
+    Wikilink scanning runs on the result so bash idioms like
+    `[[ "$x" == "y" ]]` inside a code fence aren't parsed as Obsidian links.
+    """
+    text = FENCED_CODE_RE.sub("", text)
+    text = INLINE_CODE_RE.sub("", text)
+    return text
 
 
 def parse_frontmatter(text: str) -> dict[str, str]:
@@ -64,7 +80,8 @@ def scan(vault: Path, stale_days: int, log_gap_days: int) -> dict:
     # Build link graph
     stems = {Path(k).name: k for k in pages}
     for key, page in pages.items():
-        for m in WIKILINK_RE.finditer(page["text"]):
+        scannable = strip_code_segments(page["text"])
+        for m in WIKILINK_RE.finditer(scannable):
             target = m.group(1).strip()
             # Normalize: strip .md, try full path match first, then stem
             if target.endswith(".md"):

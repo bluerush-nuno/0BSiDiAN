@@ -1,0 +1,13 @@
+# Python bytecode / caches (created when running .claude/skills/llm-wiki/scripts/*.py)
+__pycache__/
+*.pyc
+*.pyo
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor swap files
+*.swp
+*.swo
+*~
