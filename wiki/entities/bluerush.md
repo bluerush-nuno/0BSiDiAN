@@ -1,9 +1,9 @@
 ---
 title: Bluerush
 category: entity
-summary: Bluerush — the operator organization. AWS Org owner, primary region ca-central-1, running a mixed Windows/Linux web stack.
+summary: Bluerush — the operator organization. AWS Org owner, primary region ca-central-1, running a mixed Windows/Linux web stack including the TDKC TD Knowledge Centre.
 tags: [org, aws, operator]
-sources: 5
+sources: 6
 updated: 2026-04-29
 ---
 
@@ -20,11 +20,15 @@ updated: 2026-04-29
 ## AWS Infrastructure Overview
 
 - **Account model**: AWS Organizations multi-account (management + member accounts). See [[entities/aws-organizations]].
-- **Compute**: 2x Windows Server EC2 (`host1a-tdkc` in ca-central-1a, `host1b-tdkc` in ca-central-1b) behind an ALB.
-- **Database**: RDS MySQL, Multi-AZ, identifier `prod-db`.
+- **Compute**: 2x Windows Server EC2 (`host1a-tdkc` in ca-central-1a, `host1b-tdkc` in ca-central-1b) behind an ALB — these run the TDKC web property. See [[entities/tdkc]].
+- **Database**: RDS MySQL 8, Multi-AZ. The DR SOP refers to it as `prod-db`; the TDKC source identifies it as `mysql8-tdkc-rds.clgyqom42adb.ca-central-1.rds.amazonaws.com`.
 - **Storage**: EBS (encrypted) for OS/app; S3 for media backups (`prod-media-backup` primary, `prod-media-backup-dr` DR).
 - **CI/CD**: Jenkins with EC2 agents using instance profiles — no static credentials.
 - **IaC**: [[entities/opentofu]] for infrastructure; [[entities/ansible]] for config management.
+
+## Hosted Properties
+
+- [[entities/tdkc]] — TD Knowledge Centre (`td-digitalreach-html`); the production target the DR SOP restores.
 
 ## Ops Repository
 
@@ -54,6 +58,8 @@ Bluerush has a canonical PowerShell scaffold (`PSCodebase`) and a planned templa
 - [[sources/web-app-dr-sop]]
 - [[sources/github-account-recovery]]
 - [[sources/pscodebase-scaffold]], [[sources/ps-module-template-plan]]
+- [[sources/tdkc-environments]]
 - [[entities/jenkins]], [[entities/opentofu]], [[entities/ansible]], [[entities/aws-organizations]]
 - [[entities/pester]], [[entities/psscriptanalyzer]], [[entities/aws-tools-modular]], [[entities/psmoduletemplate]]
+- [[entities/tdkc]]
 - [[synthesis/secdevops-posture]], [[synthesis/dr-and-resilience-strategy]]

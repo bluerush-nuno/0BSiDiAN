@@ -3,8 +3,8 @@ title: Directory-Based Environment Isolation
 category: concept
 summary: Production and non-production environments are separated by filesystem directory, never by flags, variables, or branches. Mistakes in one environment cannot bleed into another.
 tags: [principle, environments, security, iac, ansible]
-sources: 1
-updated: 2026-04-24
+sources: 2
+updated: 2026-04-29
 ---
 
 # Directory-Based Environment Isolation
@@ -56,13 +56,17 @@ Directory isolation means:
 
 The `ENVIRONMENT` pipeline parameter (`nonprod` | `prod`) maps directly to `iac/environments/${params.ENVIRONMENT}` — a directory path, not a variable substituted into a flag. Prod additionally requires the `input` gate. See [[entities/jenkins]].
 
+## Real-World Reinforcement (TDKC)
+
+The [[entities/tdkc]] property carries the same principle into runtime layout — staging and prod live in **separate Tomcat directories** on Windows EC2 (`td-digitalreach-html-stage\` vs `td-digitalreach-html\`), with **separate RDS instances and schemas** (`mysql8-td-rds:tdkc_digitalreach_uat` vs `mysql8-tdkc-rds:tdkc_prod`). Same blast-radius logic — at the IaC layer for new infrastructure, at the OS/runtime layer for legacy stacks. See [[sources/tdkc-environments]].
+
 ---
 
 ## Related Pages
 
-- [[sources/secdevops-repo-framework]]
+- [[sources/secdevops-repo-framework]], [[sources/tdkc-environments]]
 - [[entities/opentofu]]
 - [[entities/ansible]]
-- [[entities/aws-organizations]]
-- [[concepts/blast-radius-management]]
+- [[entities/aws-organizations]], [[entities/tdkc]]
+- [[concepts/blast-radius-management]], [[concepts/stage-first-deployment]]
 - [[synthesis/secdevops-posture]]

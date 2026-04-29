@@ -4,7 +4,7 @@ category: source
 summary: Step-by-step DR runbooks for a 2x Windows EC2 + Multi-AZ RDS MySQL + S3 media stack in ca-central-1, with PowerShell automation scripts.
 tags: [dr, rds, ec2, s3, windows, powershell, runbook, ca-central-1]
 sources: 1
-updated: 2026-04-24
+updated: 2026-04-29
 source_path: chats/Web App Disaster Recovery SOP.md
 source_date: 2026-03
 authors: [Operations Team]
@@ -29,6 +29,8 @@ Stack identifiers:
 - S3 buckets: `prod-media-backup` (primary), `prod-media-backup-dr` (DR)
 - RDS identifier: `prod-db`
 - DB endpoint SSM path: `/prod/database/endpoint`
+
+> Cross-ref: this stack is the production form of [[entities/tdkc]] — `host1a/1b-tdkc` and `prod-db` correspond to `mysql8-tdkc-rds`. See [[sources/tdkc-environments]] for application-layer paths and DB schema names.
 
 ---
 

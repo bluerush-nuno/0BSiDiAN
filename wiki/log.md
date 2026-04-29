@@ -27,3 +27,7 @@ Touched: sources/pscodebase-scaffold, entities/bluerush, entities/aws-organizati
 
 ## [2026-04-29] ingest | PowerShell Module Template Plan
 Touched: sources/ps-module-template-plan, entities/psmoduletemplate, entities/bluerush, entities/pester, entities/psscriptanalyzer, entities/aws-tools-modular, concepts/scaffold-templating, concepts/public-private-module-split, concepts/explicit-module-exports, concepts/everything-as-code, index.md
+
+## [2026-04-29] ingest | TDKC DigitalReach Environments
+Touched: sources/tdkc-environments, sources/web-app-dr-sop, entities/tdkc, entities/bluerush, entities/aws-organizations, concepts/stage-first-deployment, concepts/directory-based-env-isolation, index.md
+Notes: TDKC EC2 hosts (host1a/1b-tdkc) match the DR SOP's prod stack — added cross-link in both directions. Flagged useSSL=false in JDBC URLs and static DB creds in server.xml as open hardening items on entities/tdkc.
